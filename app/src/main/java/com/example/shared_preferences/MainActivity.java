@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
         new AsyncTest().execute("Wesolych", "swiat");
     }
-    private class AsyncTest extends AsyncTask<String, String, String>{
+    private class AsyncTest extends AsyncTask<Integer, String, Void>{
         private ProgressDialog dialog;
 
         @Override
@@ -38,10 +38,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override /* runs in WORKER */
-        protected String doInBackground(String... voids) {
+        protected String doInBackground(Integer... voids) {
             for(int i = 0; i <= 10; i++){
                 try {
                     Thread.sleep(1000);
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
