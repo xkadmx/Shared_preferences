@@ -40,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
         @Override /* runs in WORKER */
         protected String doInBackground(String... voids) {
             for(int i = 0; i <= 10; i++){
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
             }
             return null;
