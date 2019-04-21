@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override /* runs in WORKER */
-        protected Void doInBackground(Integer... voids) {
-            for(int i = 0; i <= 10; i++){
+        protected Void doInBackground(Integer... params) {
+            for(int i = 0; i <= params[0]; i++){
                 try {
                     Thread.sleep(1000);
 
