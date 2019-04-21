@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
         new AsyncTest().execute("Wesolych", "swiat");
     }
-    private class AsyncTest extends AsyncTask<String, String, Void>{
+    private class AsyncTest extends AsyncTask<String, String, String>{
 
         @Override
         protected void onPreExecute() {
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Void aVoid) {
+        protected void onPostExecute(String aVoid) {
             super.onPostExecute(aVoid);
         }
 
