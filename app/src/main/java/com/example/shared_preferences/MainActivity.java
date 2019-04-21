@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new AsyncTest().execute("Wesolych", "swiat");
+        new AsyncTest().execute(20);
     }
     private class AsyncTest extends AsyncTask<Integer, String, Void>{
         private ProgressDialog dialog;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override/*runs after doInBackground()*/
-        protected void onPostExecute(String aVoid) {
+        protected void onPostExecute(Void aVoid) {
             dialog.cancel();/*hiding dialog after doInBackground execution*/
 
         }
