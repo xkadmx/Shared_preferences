@@ -23,12 +23,13 @@ public class MainActivity extends AppCompatActivity {
             dialog.setTitle("Pobieranie");
             dialog.setMessage("Trwa pobieranie czekoladowych, wielkanocnych kalorii...");
             dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-            super.onPreExecute();
+            dialog.show(); /*showing dialog to the world!*/
         }
 
         @Override/*runs after doInBackground()*/
         protected void onPostExecute(String aVoid) {
-            super.onPostExecute(aVoid);
+            dialog.cancel();/*hiding dialog after doInBackground execution*/
+
         }
 
         @Override
