@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new AsyncTest().execute();
+        new AsyncTest().execute("Wesolych", "swiat");
     }
     private class AsyncTest extends AsyncTask<String, Void, Void>{
 
