@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
         new AsyncTest().execute(20);
     }
-    private class AsyncTest extends AsyncTask<Integer, String, Void>{
+    private class AsyncTest extends AsyncTask<Integer, Integer, Void>{
         private ProgressDialog dialog;
 
         @Override
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onProgressUpdate(String... values) {
+        protected void onProgressUpdate(Integer... values) {
             super.onProgressUpdate(values);
         }
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                publishProgress();
+                publishProgress(i);
 
             }
             return null;
