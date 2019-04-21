@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             super.onProgressUpdate(values);
         }
 
-        @Override
+        @Override /* runs in WORKER */
         protected Void doInBackground(Void... voids) {
             return null;
         }
