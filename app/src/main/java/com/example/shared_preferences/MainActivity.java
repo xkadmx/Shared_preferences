@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
         @Override /* runs in WORKER */
         protected String doInBackground(String... voids) {
+            for(int i = 0, i <= 10, i++){
+
+            }
             return null;
         }
     }
