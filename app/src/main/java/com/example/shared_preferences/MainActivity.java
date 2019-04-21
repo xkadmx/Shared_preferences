@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
         new AsyncTest().execute("Wesolych", "swiat");
     }
-    private class AsyncTest extends AsyncTask<String, Void, Void>{
+    private class AsyncTest extends AsyncTask<String, String, Void>{
 
         @Override
         protected void onPreExecute() {
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onProgressUpdate(Void... values) {
+        protected void onProgressUpdate(String... values) {
             super.onProgressUpdate(values);
         }
 
