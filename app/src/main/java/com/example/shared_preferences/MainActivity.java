@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         protected void onPreExecute() {
             dialog = new ProgressDialog(MainActivity.this);
             dialog.setTitle("Pobieranie");
+            dialog.setMessage("Trwa pobieranie czekoladowych, wielkanocnych kalorii...");
+            dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
             super.onPreExecute();
         }
 
