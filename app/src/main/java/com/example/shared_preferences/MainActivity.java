@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override /* runs in WORKER */
-        protected Void doInBackground(String... voids) {
+        protected String doInBackground(String... voids) {
             return null;
         }
     }
