@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                publishProgress();
 
             }
             return null;
