@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
         new AsyncTest().execute();
     }
-    private class AsyncTest extends AsyncTask<Void, Void, Void>{
+    private class AsyncTest extends AsyncTask<String, Void, Void>{
 
         @Override
         protected void onPreExecute() {
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override /* runs in WORKER */
-        protected Void doInBackground(Void... voids) {
+        protected Void doInBackground(String... voids) {
             return null;
         }
     }
